@@ -1,0 +1,275 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   VARIÁVEIS (LIGHT)
+========================= */
+:root {
+  --bg-gradient: linear-gradient(135deg, #8a8a8b, #d7d6d6);
+  --header-bg: #ffffff;
+  --text: #111;
+  --text-light: #fff;
+  --input-bg: #fff;
+  --border: #ccc;
+
+  --btn-reset: #721818;
+  --btn-reset-hover: #9b0b0b;
+
+  --btn-submit: #0b7e17;
+  --btn-submit-hover: #04a314;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+#theme-toggle:checked ~ .page {
+  --bg-gradient: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  --header-bg: #333;
+  --text: #eee;
+  --text-light: #fff;
+  --input-bg: #1e1e1e;
+  --border: #444;
+
+  --btn-reset: #a83232;
+  --btn-reset-hover: #ff4d4d;
+
+  --btn-submit: #1faa3c;
+  --btn-submit-hover: #2fff5c;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-gradient);
+  transition: 0.3s;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 80px;
+  padding: 10vh 2vw;
+
+  background: var(--header-bg);
+  border-radius: 0 0 15px 15px;
+}
+
+header a{
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  transition: all .2s ease-in-out;
+  position: absolute;
+  left: 20px;
+}
+
+header img:hover{
+  transform: scale(0.98);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+/* BOTÃO TEMA */
+.theme-btn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all .3s ease;
+}
+
+.theme-btn:hover {
+  font-size: 1.6rem;
+  transform: scale(1.1) rotate(15deg);
+}
+
+
+/* Ícones */
+.icon {
+  display: none;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+#theme-toggle:not(:checked) ~ .page header .moon {
+  display: inline;
+  background-color: #000000;
+}
+
+#theme-toggle:checked ~ .page header .sun {
+  display: inline;
+  background-color: #ffffff;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 2vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  font-weight: bold;
+  color: var(--text);
+}
+
+input,
+textarea,
+select {
+  padding: 2vh 1vw;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--input-bg);
+  color: var(--text);
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+button {
+  padding: 2vh 3vw;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 2vw;
+}
+
+.limpar {
+  background: var(--btn-reset);
+}
+
+.enviar {
+  background: var(--btn-submit);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.limpar:hover {
+  background: var(--btn-reset-hover);
+  box-shadow: 0 0 5px 1px var(--btn-reset);
+}
+
+.enviar:hover {
+  background: var(--btn-submit-hover);
+  box-shadow: 0 0 5px 1px var(--btn-submit);
+}
+
+/* =========================
+   SECTION
+========================= */
+section {
+  width: 100%; /* ocupa toda largura */
+  display: flex;
+  justify-content: flex-end; /* joga ícones pra direita */
+  gap: 15px;
+}
+
+section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+section img:hover {
+  transform: scale(1.15);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  font-style: italic;
+  padding: 2vh;
+  background: var(--header-bg);
+  color: var(--text);
+
+  border-radius: 15px 15px 0 0;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width:900px){
+
+main{
+  padding: auto 50rem;
+}
+header h1{
+  font-size: 1rem;
+}
+header img{
+  width: 50px;
+  height: 50px;
+}
+.theme-btn{
+  font-size: 1rem;
+}
+.theme-btn:hover {
+  font-size: 1.2rem;
+  transform: scale(1.1) rotate(15deg);
+}
+.botoes{
+  gap: 15vw;
+
+}
+button {
+  padding: 2vh 6vw;
+  font-size: 6vw;
+}
+footer {
+  font-size: 3vw;
+}
+}

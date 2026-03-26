@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato Responsivo | HTML e CSS</title>
+    <meta name="description" content="Formulário de contato responsivo desenvolvido apenas com HTML5 e CSS3, com validação nativa e layout adaptável para diferentes dispositivos.">
+    <meta name="keywords" content="formulário, HTML5, CSS3, responsivo, contato, frontend">
+    <meta name="author" content="Matheus Fernando Ribeiro Martins">
+    <meta name="theme-color" content="#333333">
+    <meta property="og:title" content="Formulário Responsivo">
+    <meta property="og:description" content="Projeto de formulário criado apenas com HTML e CSS.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/img/logo.jfif">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/img/logo.jfif" type="image/x-icon">
+
+  </head>
+  <body>
+    <input type="checkbox" id="theme-toggle" hidden/>
+    <div class="page">
+      <header>
+        <a href="https://www.unileste.catolica.edu.br/portal/" target="_blank" rel="noreferrer">
+          <img src="/img/logo.jfif" alt="Logo"/>
+        </a>
+
+        <h1>Formulário e Responsividade</h1>
+
+        <label for="theme-toggle" class="theme-btn">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+        </label>
+      </header>
+      <main>
+        <form 
+          action="mailto:matheus1030br@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Nome completo:</label>
+          <input
+            type="text"
+            id="name"
+            name="nome"
+            required
+            placeholder="Digite seu nome completo"
+            minlength="2"
+            pattern=".{2,}"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Digite seu email"
+          />
+
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione um assunto</option>
+            <option value="duvida">Dúvida</option>
+            <option value="suporte">Suporte</option>
+            <option value="feedback">Feedback</option>
+          </select>
+
+          <label for="message">Mensagem:</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Digite sua mensagem"
+            maxlength="500"
+          ></textarea>
+
+          <div class="botoes">
+            <button type="reset" class="limpar">Limpar</button>
+            <button type="submit" class="enviar">Enviar</button>
+          </div>
+        </form>
+        <section>
+          <a href="https://github.com/Matheus-Fernando-br" target="_blank">
+            <img src="/img/github.png" alt="GitHub">
+          </a>
+
+          <a href="https://www.linkedin.com/in/matheus-ribeiro-7b4a9822b/" target="_blank">
+            <img src="/img/linkedin.avif" alt="LinkedIn">
+          </a>
+        </section>
+      </main>
+      <footer>
+        <p>
+          &copy; 2026 Formulário e Responsividade. Todos os direitos reservados.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
