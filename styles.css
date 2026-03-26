@@ -85,6 +85,52 @@ transition:.3s;
 
 }
 
+/* transição suave das cores */
+
+.page,
+header,
+form,
+input,
+textarea,
+select,
+button,
+footer,
+section img{
+
+transition:
+
+background .35s ease,
+
+color .35s ease,
+
+border-color .35s ease,
+
+box-shadow .35s ease;
+
+}
+
+.page{
+
+animation: themeFade 2s ease;
+
+}
+
+@keyframes themeFade{
+
+from{
+
+opacity:.85;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
 /* =========================
 HEADER
 ========================= */
