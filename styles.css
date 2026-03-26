@@ -67,7 +67,9 @@ BASE
 
 body{
 
-font-family: system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+
+-webkit-font-smoothing:antialiased;
 
 }
 
@@ -79,7 +81,13 @@ flex-direction:column;
 
 min-height:100vh;
 
-background:var(--bg-gradient);
+background:
+
+radial-gradient(circle at 20% 20%, rgba(99,102,241,.08), transparent 40%),
+
+radial-gradient(circle at 80% 60%, rgba(99,102,241,.05), transparent 40%),
+
+var(--bg-gradient);
 
 transition:.3s;
 
@@ -151,7 +159,29 @@ backdrop-filter: blur(12px);
 
 background:var(--header-bg);
 
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
+
 border-bottom:1px solid var(--border);
+
+}
+
+header::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+height:2px;
+
+background:linear-gradient(90deg,var(--primary),transparent);
+
+opacity:.4;
 
 }
 
@@ -246,7 +276,7 @@ font-size:1.3rem;
 
 font-weight:600;
 
-letter-spacing:.03rem;
+letter-spacing:.04em;
 
 color:var(--text);
 
@@ -339,7 +369,21 @@ width:100%;
 
 max-width:28rem;
 
-background:var(--card-bg);
+background:linear-gradient(
+
+145deg,
+
+var(--card-bg),
+
+rgba(255,255,255,0.35)
+
+);
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.08),
+
+inset 0 1px 0 rgba(255,255,255,.2);
 
 backdrop-filter: blur(14px);
 
@@ -349,7 +393,6 @@ border-radius:1.2rem;
 
 border:1px solid var(--border);
 
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
 animation:fadeUp .5s ease;
 
@@ -363,9 +406,25 @@ font-size:.85rem;
 
 font-weight:500;
 
+letter-spacing:.03em;
+
+text-transform:uppercase;
+
+opacity:.8;
+
 margin-top:1vh;
 
 color:var(--text);
+
+}
+
+label i{
+
+margin-right:.4rem;
+
+font-size:.9rem;
+
+color:var(--primary);
 
 }
 
@@ -385,7 +444,11 @@ background:var(--input-bg);
 
 color:var(--text);
 
-font-size:.9rem;
+font-weight:500;
+
+letter-spacing:.03em;
+
+opacity:.8;
 
 transition:.25s;
 
@@ -399,13 +462,13 @@ input:focus,
 textarea:focus,
 select:focus{
 
-outline:none;
+transform:translateY(-1px) scale(1.01);
 
-border:1px solid var(--primary);
+box-shadow:
 
-box-shadow:0 0 0 3px var(--primary-soft);
+0 0 0 3px var(--primary-soft),
 
-transform:scale(1.01);
+0 8px 20px rgba(0,0,0,.08);
 
 }
 
@@ -464,6 +527,46 @@ font-size:1rem;
 cursor:pointer;
 
 transition:.25s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+button::after{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+top:0;
+
+left:-100%;
+
+background:linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,.25),
+
+transparent
+
+);
+
+transition:.4s;
+
+}
+
+button:hover::after{
+
+left:100%;
 
 }
 
