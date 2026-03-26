@@ -1,35 +1,47 @@
 # Formulário de Contato Responsivo
 
-Projeto desenvolvido como atividade da disciplina **Sistemas Web** da 
-UNILESTE (Centro Universitário Católica do Leste de Minas Gerais).
+Projeto desenvolvido como atividade da disciplina **Sistemas Web** do **UNILESTE** (Centro Universitário Católica do Leste de Minas Gerais).
 
-O objetivo da atividade foi criar um **formulário de contato responsivo** utilizando apenas **HTML5 e CSS3**, sem uso de JavaScript.
+O objetivo foi criar um **formulário de contato moderno, acessível e responsivo**, utilizando apenas **HTML5 e CSS3**, sem uso de JavaScript, aplicando boas práticas de estruturação semântica e responsividade.
+
+---
 
 ## GitHub Pages
-Acesse pelo GitHub Pages:
+
+Visualize o projeto online:
 
 https://matheus-fernando-br.github.io/Formulario-Atividade-Unileste/
 
+---
+
 ## Funcionalidades
 
-O formulário possui validações nativas do HTML5 e layout adaptável para diferentes dispositivos.
+O formulário utiliza validações nativas do HTML5 e possui layout adaptável para diferentes tamanhos de tela.
 
-Campos obrigatórios:
+### Campos obrigatórios
+
 - Nome completo (mínimo 2 caracteres)
-- Email válido
-- Assunto (select obrigatório)
-- Mensagem (máximo 500 caracteres)
+- E-mail válido
+- Assunto (campo select obrigatório)
+- Mensagem (máximo de 500 caracteres)
 
-Controles:
-- Botão Enviar
-- Botão Limpar
+### Controles
 
-Extras implementados:
-- Dark mode (modo escuro)
+- Botão **Enviar**
+- Botão **Limpar**
+
+### Recursos extras implementados
+
+- Modo escuro (Dark Mode)
 - Layout responsivo
+- Interface moderna (estilo minimalista premium)
 - Ícones com links para redes profissionais
 - Estrutura semântica (header, main, footer)
 - Meta tags para SEO e compartilhamento
+- Validação nativa do navegador
+- Interface amigável e acessível
+
+---
 
 ## Tecnologias utilizadas
 
@@ -37,58 +49,60 @@ Extras implementados:
 - CSS3
 - Flexbox
 - Media Queries
-- Validação nativa do navegador
+- Variáveis CSS
+- Validação nativa HTML5
+
+---
 
 ## Responsividade
 
 O layout se adapta automaticamente para:
+
 - Celulares
 - Tablets
 - Computadores
 
-Utilizando:
-- Unidades relativas (vh, vw, %)
+Foram utilizadas:
+
+- Unidades relativas (vh, vw, rem e %)
 - Flexbox
 - Media queries
+- Layout fluido
+
+---
 
 ## Como visualizar o projeto
 
-O projeto pode ser aberto localmente ou acessado via GitHub Pages.
+O projeto pode ser acessado online ou executado localmente.
 
 ### Executar localmente
+
 Basta abrir o arquivo:
 
 index.html
 
 em qualquer navegador.
 
-## Estrutura do projeto
 
-/project
-│
-├── index.html
-├── styles.css
-└── img
-├── logo.jfif
-├── github.png
-└── linkedin.avif
-
+---
 
 ## Autor
 
-Matheus Fernando Ribeiro Martins
+**Matheus Fernando Ribeiro Martins**
 
-GitHub:
+GitHub  
 https://github.com/Matheus-Fernando-br
 
-LinkedIn:
+LinkedIn  
 https://www.linkedin.com/in/matheus-ribeiro-7b4a9822b/
+
+---
 
 ## Observação
 
 O envio do formulário utiliza o recurso `mailto:` apenas para fins de teste local, conforme permitido na atividade.
 
-Nenhum JavaScript foi utilizado, conforme requisito da proposta.
+Nenhum JavaScript foi utilizado, atendendo aos requisitos da proposta.
 
 ---
 

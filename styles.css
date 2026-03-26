@@ -17,9 +17,7 @@ VARIÁVEIS (LIGHT)
 
 --card-bg: rgba(255,255,255,0.7);
 
---text: #0f172a;
-
---text-light:#ffffff;
+--text:#0f172a;
 
 --input-bg: rgba(255,255,255,0.9);
 
@@ -31,7 +29,7 @@ VARIÁVEIS (LIGHT)
 
 --btn-reset:#f1f5f9;
 
---btn-reset-hover:#f0e2e2;
+--btn-reset-hover:#e2e8f0;
 
 }
 
@@ -59,7 +57,7 @@ DARK MODE
 
 --btn-reset:#020617;
 
---btn-reset-hover:#170202;
+--btn-reset-hover:#020617;
 
 }
 
@@ -69,7 +67,7 @@ BASE
 
 body{
 
-font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+font-family: system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
 
 }
 
@@ -101,7 +99,7 @@ align-items:center;
 
 justify-content:center;
 
-padding:4.5vh 12vw;
+padding:4vh 4vw;
 
 backdrop-filter: blur(12px);
 
@@ -115,7 +113,7 @@ header a{
 
 position:absolute;
 
-left:20px;
+left:3vw;
 
 display:flex;
 
@@ -129,7 +127,7 @@ width:55px;
 
 height:55px;
 
-border-radius:14px;
+border-radius:1rem;
 
 transition:.2s;
 
@@ -147,9 +145,11 @@ font-size:1.3rem;
 
 font-weight:600;
 
-letter-spacing:.3px;
+letter-spacing:.03rem;
 
 color:var(--text);
+
+text-align:center;
 
 }
 
@@ -159,18 +159,18 @@ color:var(--text);
 
 position:absolute;
 
-right:20px;
+right:3vw;
 
 cursor:pointer;
 
-font-size:1.2rem;
+font-size:1.3rem;
 
-transition: all .4s ease;
+transition:.3s;
 
-border: 1px solid #ccced16b;
-border-radius: 10px;
+border: 1px solid #aaa8a82f;
 
 padding: 1vh .5vw;
+border-radius: 10px;
 
 }
 
@@ -188,7 +188,7 @@ display:none;
 
 padding:.4rem;
 
-border-radius:8px;
+border-radius:.5rem;
 
 }
 
@@ -220,7 +220,7 @@ justify-content:center;
 
 flex:1;
 
-padding:40px 20px;
+padding:6vh 4vw;
 
 }
 
@@ -232,25 +232,23 @@ display:flex;
 
 flex-direction:column;
 
-gap:8px;
+gap:1vh;
 
 width:100%;
 
-max-width:420px;
+max-width:28rem;
 
 background:var(--card-bg);
 
 backdrop-filter: blur(14px);
 
-padding:35px;
+padding:6vh 2vw;
 
-border-radius:18px;
+border-radius:1.2rem;
 
 border:1px solid var(--border);
 
-box-shadow:
-
-0 10px 30px rgba(0,0,0,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
 animation:fadeUp .5s ease;
 
@@ -264,7 +262,7 @@ font-size:.85rem;
 
 font-weight:500;
 
-margin-top:10px;
+margin-top:1vh;
 
 color:var(--text);
 
@@ -276,9 +274,9 @@ input,
 textarea,
 select{
 
-padding:14px;
+padding:1.5vh 1vw;
 
-border-radius:10px;
+border-radius:5px;
 
 border:1px solid var(--border);
 
@@ -290,9 +288,11 @@ font-size:.9rem;
 
 transition:.25s;
 
+margin-bottom: 2vh;
+
 }
 
-/* FOCUS PREMIUM */
+/* FOCUS */
 
 input:focus,
 textarea:focus,
@@ -314,7 +314,7 @@ textarea{
 
 resize:none;
 
-min-height:120px;
+min-height:18vh;
 
 }
 
@@ -326,11 +326,11 @@ display:flex;
 
 align-items:center;
 
-gap:8px;
+gap:.5rem;
 
 font-size:.85rem;
 
-margin-top:10px;
+margin-top:1vh;
 
 }
 
@@ -340,9 +340,9 @@ margin-top:10px;
 
 display:flex;
 
-gap:12px;
+gap:1vw;
 
-margin-top:20px;
+margin-top:2vh;
 
 }
 
@@ -350,15 +350,15 @@ button{
 
 flex:1;
 
-padding:13px;
+padding:1.8vh 1vw;
 
 border:none;
 
-border-radius:10px;
+border-radius:.6rem;
 
 font-weight:500;
 
-font-size:.9rem;
+font-size:1rem;
 
 cursor:pointer;
 
@@ -366,7 +366,7 @@ transition:.25s;
 
 }
 
-/* BOTÃO ENVIAR */
+/* ENVIAR */
 
 .enviar{
 
@@ -378,13 +378,13 @@ color:white;
 
 .enviar:hover{
 
-transform:translateY(-2px);
+transform:translateY(-.2vh);
 
-box-shadow:0 8px 18px var(--primary-soft);
+box-shadow:0 .8vh 2vh var(--primary-soft);
 
 }
 
-/* BOTÃO LIMPAR */
+/* LIMPAR */
 
 .limpar{
 
@@ -393,7 +393,6 @@ background:var(--btn-reset);
 color:var(--text);
 
 border:1px solid var(--border);
-transition: all .6s ease;
 
 }
 
@@ -413,21 +412,21 @@ display:flex;
 
 justify-content:center;
 
-gap:20px;
+gap:2vw;
 
-margin-top:35px;
+margin-top:4vh;
 
 }
 
 section img{
 
-width:42px;
+width:5vh;
 
-height:42px;
+height:5vh;
 
-padding:8px;
+padding:.6vh;
 
-border-radius:12px;
+border-radius:.7rem;
 
 background:var(--card-bg);
 
@@ -439,9 +438,9 @@ transition:.25s;
 
 section img:hover{
 
-transform:translateY(-3px);
+transform:translateY(-.3vh);
 
-box-shadow:0 8px 18px rgba(0,0,0,.08);
+box-shadow:0 .8vh 2vh rgba(0,0,0,.08);
 
 }
 
@@ -455,7 +454,7 @@ text-align:center;
 
 font-size:.75rem;
 
-padding:20px;
+padding:2vh;
 
 color:var(--text);
 
@@ -473,7 +472,7 @@ from{
 
 opacity:0;
 
-transform:translateY(15px);
+transform:translateY(2vh);
 
 }
 
@@ -495,7 +494,7 @@ RESPONSIVO
 
 form{
 
-padding:25px;
+padding:4vh 7vw;
 
 }
 
@@ -503,18 +502,36 @@ header h1{
 
 font-size:1rem;
 
-text-align:center;
-
-max-width:160px;
+max-width:40vw;
 
 }
 
 header img{
 
-width:45px;
+width:5vh;
 
-height:45px;
+height:5vh;
 
+}
+
+.theme-btn{
+
+font-size:1.1rem;
+
+}
+
+section{
+
+gap:6vw;
+
+}
+
+button {
+  padding: 2vh 1vw;
+}
+
+.botoes {
+  gap:2vw;
 }
 
 }
