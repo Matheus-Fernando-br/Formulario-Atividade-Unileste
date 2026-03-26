@@ -205,10 +205,10 @@ button:hover {
    SECTION
 ========================= */
 section {
-  width: 100%; /* ocupa toda largura */
+  width: 100%;
   display: flex;
-  justify-content: flex-end; /* joga ícones pra direita */
-  gap: 15px;
+  justify-content: flex-end;
+  gap: 3vw;
 }
 
 section img {
@@ -268,6 +268,11 @@ header img{
 button {
   padding: 2vh 6vw;
   font-size: 6vw;
+}
+section {
+  margin-top: 8vh;
+  justify-content: center;
+  gap: 10vw;
 }
 footer {
   font-size: 3vw;
